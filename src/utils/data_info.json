@@ -1,0 +1,21 @@
+{
+    "lang_code": {
+        "en": "English",
+        "de": "German",
+        "fr": "French",
+        "cs": "Czech",
+        "is": "Icelandic",
+        "zh": "Chinese",
+        "ja": "Japanese",
+        "ru": "Russian",
+        "uk": "Ukrainian",
+        "ha": "Hausa",
+        "ro": "Romanian",
+        "gu": "Gujarati"
+    },
+    "prompts":{
+        "general_trans":[
+            "Translate the following text from {} to {}:\n{}: \n{}: "
+        ]
+    }
+}

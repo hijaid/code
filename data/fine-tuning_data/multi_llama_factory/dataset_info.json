@@ -1,0 +1,893 @@
+{ "valid-bd-cs": {
+    "file_name": "valid.bd.cs-en.json"
+  },
+  "valid-bd-de": {
+    "file_name": "valid.bd.de-en.json"
+  },
+  "valid-bd-ru": {
+    "file_name": "valid.bd.ru-en.json"
+  },
+  "valid-bd-zh": {
+    "file_name": "valid.bd.zh-en.json"
+  },
+  "valid-bd-fi": {
+    "file_name": "valid.bd.fi-en.json"
+  },
+  "valid-bd-kk": {
+    "file_name": "valid.bd.kk-en.json"
+  },
+  "valid-bd-he": {
+    "file_name": "valid.bd.he-en.json"
+  },
+  "valid-bd-is": {
+    "file_name": "valid.bd.is-en.json"
+  },
+  "train-bd-cs": {
+    "file_name": "train.bd.cs-en.json"
+  },
+  "train-bd-de": {
+    "file_name": "train.bd.de-en.json"
+  },
+  "train-bd-ru": {
+    "file_name": "train.bd.ru-en.json"
+  },
+  "train-bd-zh": {
+    "file_name": "train.bd.zh-en.json"
+  },
+  "train-bd-fi": {
+    "file_name": "train.bd.fi-en.json"
+  },
+  "train-bd-kk": {
+    "file_name": "train.bd.kk-en.json"
+  },
+  "train-bd-he": {
+    "file_name": "train.bd.he-en.json"
+  },
+  "train-bd-is": {
+    "file_name": "train.bd.is-en.json"
+  },
+  "test-biomedical-en-de": {
+    "file_name": "test.biomedical.en-de.json"
+  },
+  "test-biomedical-de-en": {
+    "file_name": "test.biomedical.de-en.json"
+  },
+  "test-biomedical-en-ru": {
+    "file_name": "test.biomedical.en-ru.json"
+  },
+  "test-biomedical-ru-en": {
+    "file_name": "test.biomedical.ru-en.json"
+  },
+  "test-biomedical-en-zh": {
+    "file_name": "test.biomedical.en-zh.json"
+  },
+  "test-biomedical-zh-en": {
+    "file_name": "test.biomedical.zh-en.json"
+  },
+  "train-alma": {
+    "file_name": "train.alma.json"
+  },
+  "valid-alma": {
+    "file_name": "valid.alma.json"
+  },
+  "test-fr-de": {
+    "file_name": "test.fr-de.json"
+  },
+  "test-de-fr": {
+    "file_name": "test.de-fr.json"
+  },
+  "test-cs-de": {
+    "file_name": "test.cs-de.json"
+  },
+  "test-de-cs": {
+    "file_name": "test.de-cs.json"
+  },
+  "train-multi-wo-kk": {
+    "file_name": "train_wo_kk.json"
+  },
+  "valid-multi-wo-kk": {
+    "file_name": "valid_wo_kk.json"
+  },  
+  "train-multi": {
+    "file_name": "train.multi.json"
+  },
+  "valid-multi": {
+    "file_name": "valid.multi.json"
+  }, 
+  "train-multi-high": {
+    "file_name": "train.multi.high.json"
+  },
+  "valid-multi-high": {
+    "file_name": "valid.multi.high.json"
+  },  
+  "train-en-xx": {
+    "file_name": "train.en-xx.json"
+  },
+  "train-xx-en": {
+    "file_name": "train.xx-en.json"
+  },
+  "valid-en-xx": {
+    "file_name": "valid.en-xx.json"
+  },
+  "valid-xx-en": {
+    "file_name": "valid.xx-en.json"
+  },
+  "train-doc-en-de": {
+    "file_name": "train.doc.en-de.json"
+  },
+  "train-doc-de-en": {
+    "file_name": "train.doc.de-en.json"
+  },
+  "valid-doc-en-de": {
+    "file_name": "valid.doc.en-de.json"
+  },
+  "valid-doc-de-en": {
+    "file_name": "valid.doc.de-en.json"
+  },
+  "test-doc-en-de": {
+    "file_name": "test.doc.en-de.json"
+  },
+  "test-doc-de-en": {
+    "file_name": "test.doc.de-en.json"
+  },
+  "train-doc-en-zh": {
+    "file_name": "train.doc.en-zh.json"
+  },
+  "train-doc-zh-en": {
+    "file_name": "train.doc.zh-en.json"
+  },
+  "valid-doc-en-zh": {
+    "file_name": "valid.doc.en-zh.json"
+  },
+  "valid-doc-zh-en": {
+    "file_name": "valid.doc.zh-en.json"
+  },
+  "test-doc-en-zh": {
+    "file_name": "test.doc.en-zh.json"
+  },
+  "test-doc-zh-en": {
+    "file_name": "test.doc.zh-en.json"
+  },
+  "train-en-zh": {
+    "file_name": "train.en-zh.json"
+  },
+  "train-zh-en": {
+    "file_name": "train.zh-en.json"
+  },
+  "valid-en-zh": {
+    "file_name": "valid.en-zh.json"
+  },
+  "valid-zh-en": {
+    "file_name": "valid.zh-en.json"
+  },
+  "test-en-zh": {
+    "file_name": "test.en-zh.json"
+  },
+  "test-zh-en": {
+    "file_name": "test.zh-en.json"
+  },
+  "train-en-de": {
+    "file_name": "train.en-de.json"
+  },
+  "train-de-en": {
+    "file_name": "train.de-en.json"
+  },
+  "valid-en-de": {
+    "file_name": "valid.en-de.json"
+  },
+  "valid-de-en": {
+    "file_name": "valid.de-en.json"
+  },
+  "test-en-de": {
+    "file_name": "test.en-de.json"
+  },
+  "test-de-en": {
+    "file_name": "test.de-en.json"
+  },
+  "train-en-ru": {
+    "file_name": "train.en-ru.json"
+  },
+  "train-ru-en": {
+    "file_name": "train.ru-en.json"
+  },
+  "valid-en-ru": {
+    "file_name": "valid.en-ru.json"
+  },
+  "valid-ru-en": {
+    "file_name": "valid.ru-en.json"
+  },
+  "test-en-ru": {
+    "file_name": "test.en-ru.json"
+  },
+  "test-ru-en": {
+    "file_name": "test.ru-en.json"
+  },
+  "train-en-cs": {
+    "file_name": "train.en-cs.json"
+  },
+  "train-cs-en": {
+    "file_name": "train.cs-en.json"
+  },
+  "valid-en-cs": {
+    "file_name": "valid.en-cs.json"
+  },
+  "valid-cs-en": {
+    "file_name": "valid.cs-en.json"
+  },
+  "test-en-cs": {
+    "file_name": "test.en-cs.json"
+  },
+  "test-cs-en": {
+    "file_name": "test.cs-en.json"
+  },
+  "train-en-he": {
+    "file_name": "train.en-he.json"
+  },
+  "train-he-en": {
+    "file_name": "train.he-en.json"
+  },
+  "valid-en-he": {
+    "file_name": "valid.en-he.json"
+  },
+  "valid-he-en": {
+    "file_name": "valid.he-en.json"
+  },
+  "test-en-he": {
+    "file_name": "test.en-he.json"
+  },
+  "test-he-en": {
+    "file_name": "test.he-en.json"
+  },
+  "train-en-kk": {
+    "file_name": "train.en-kk.json"
+  },
+  "train-kk-en": {
+    "file_name": "train.kk-en.json"
+  },
+  "valid-en-kk": {
+    "file_name": "valid.en-kk.json"
+  },
+  "valid-kk-en": {
+    "file_name": "valid.kk-en.json"
+  },
+  "test-en-kk": {
+    "file_name": "test.en-kk.json"
+  },
+  "test-kk-en": {
+    "file_name": "test.kk-en.json"
+  },
+  "train-en-fi": {
+    "file_name": "train.en-fi.json"
+  },
+  "train-fi-en": {
+    "file_name": "train.fi-en.json"
+  },
+  "valid-en-fi": {
+    "file_name": "valid.en-fi.json"
+  },
+  "valid-fi-en": {
+    "file_name": "valid.fi-en.json"
+  },
+  "test-en-fi": {
+    "file_name": "test.en-fi.json"
+  },
+  "test-fi-en": {
+    "file_name": "test.fi-en.json"
+  },
+  "train-en-is": {
+    "file_name": "train.en-is.json"
+  },
+  "train-is-en": {
+    "file_name": "train.is-en.json"
+  },
+  "valid-en-is": {
+    "file_name": "valid.en-is.json"
+  },
+  "valid-is-en": {
+    "file_name": "valid.is-en.json"
+  },
+  "test-en-is": {
+    "file_name": "test.en-is.json"
+  },
+  "test-is-en": {
+    "file_name": "test.is-en.json"
+  },
+  "towerblock_train": {
+    "file_name": "train.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations"
+    }
+  },
+  "towerblock_valid": {
+    "file_name": "valid.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations"
+    }
+  },
+  "police_aq": {
+    "file_name": "train.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+  },
+  "chat_test": {
+    "file_name": "sample_5k.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations"
+    }
+  },
+  "identity": {
+    "file_name": "identity.json"
+  },
+  "alpaca_en_demo": {
+    "file_name": "alpaca_en_demo.json"
+  },
+  "alpaca_zh_demo": {
+    "file_name": "alpaca_zh_demo.json"
+  },
+  "glaive_toolcall_en_demo": {
+    "file_name": "glaive_toolcall_en_demo.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "tools": "tools"
+    }
+  },
+  "glaive_toolcall_zh_demo": {
+    "file_name": "glaive_toolcall_zh_demo.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "tools": "tools"
+    }
+  },
+  "mllm_demo": {
+    "file_name": "mllm_demo.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "alpaca_en": {
+    "hf_hub_url": "llamafactory/alpaca_en",
+    "ms_hub_url": "llamafactory/alpaca_en"
+  },
+  "alpaca_zh": {
+    "hf_hub_url": "llamafactory/alpaca_zh",
+    "ms_hub_url": "llamafactory/alpaca_zh"
+  },
+  "alpaca_gpt4_en": {
+    "hf_hub_url": "llamafactory/alpaca_gpt4_en",
+    "ms_hub_url": "llamafactory/alpaca_gpt4_en"
+  },
+  "alpaca_gpt4_zh": {
+    "hf_hub_url": "llamafactory/alpaca_gpt4_zh",
+    "ms_hub_url": "llamafactory/alpaca_gpt4_zh"
+  },
+  "glaive_toolcall_en": {
+    "hf_hub_url": "llamafactory/glaive_toolcall_en",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "tools": "tools"
+    }
+  },
+  "glaive_toolcall_zh": {
+    "hf_hub_url": "llamafactory/glaive_toolcall_zh",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "tools": "tools"
+    }
+  },
+  "lima": {
+    "hf_hub_url": "llamafactory/lima",
+    "formatting": "sharegpt"
+  },
+  "guanaco": {
+    "hf_hub_url": "JosephusCheung/GuanacoDataset",
+    "ms_hub_url": "AI-ModelScope/GuanacoDataset"
+  },
+  "belle_2m": {
+    "hf_hub_url": "BelleGroup/train_2M_CN",
+    "ms_hub_url": "AI-ModelScope/train_2M_CN"
+  },
+  "belle_1m": {
+    "hf_hub_url": "BelleGroup/train_1M_CN",
+    "ms_hub_url": "AI-ModelScope/train_1M_CN"
+  },
+  "belle_0.5m": {
+    "hf_hub_url": "BelleGroup/train_0.5M_CN",
+    "ms_hub_url": "AI-ModelScope/train_0.5M_CN"
+  },
+  "belle_dialog": {
+    "hf_hub_url": "BelleGroup/generated_chat_0.4M",
+    "ms_hub_url": "AI-ModelScope/generated_chat_0.4M"
+  },
+  "belle_math": {
+    "hf_hub_url": "BelleGroup/school_math_0.25M",
+    "ms_hub_url": "AI-ModelScope/school_math_0.25M"
+  },
+  "belle_multiturn": {
+    "script_url": "belle_multiturn",
+    "formatting": "sharegpt"
+  },
+  "ultra_chat": {
+    "script_url": "ultra_chat",
+    "formatting": "sharegpt"
+  },
+  "open_platypus": {
+    "hf_hub_url": "garage-bAInd/Open-Platypus",
+    "ms_hub_url": "AI-ModelScope/Open-Platypus"
+  },
+  "codealpaca": {
+    "hf_hub_url": "sahil2801/CodeAlpaca-20k",
+    "ms_hub_url": "AI-ModelScope/CodeAlpaca-20k"
+  },
+  "alpaca_cot": {
+    "hf_hub_url": "QingyiSi/Alpaca-CoT",
+    "ms_hub_url": "AI-ModelScope/Alpaca-CoT"
+  },
+  "openorca": {
+    "hf_hub_url": "Open-Orca/OpenOrca",
+    "ms_hub_url": "AI-ModelScope/OpenOrca",
+    "columns": {
+      "prompt": "question",
+      "response": "response",
+      "system": "system_prompt"
+    }
+  },
+  "slimorca": {
+    "hf_hub_url": "Open-Orca/SlimOrca",
+    "formatting": "sharegpt"
+  },
+  "mathinstruct": {
+    "hf_hub_url": "TIGER-Lab/MathInstruct",
+    "ms_hub_url": "AI-ModelScope/MathInstruct",
+    "columns": {
+      "prompt": "instruction",
+      "response": "output"
+    }
+  },
+  "firefly": {
+    "hf_hub_url": "YeungNLP/firefly-train-1.1M",
+    "columns": {
+      "prompt": "input",
+      "response": "target"
+    }
+  },
+  "wikiqa": {
+    "hf_hub_url": "wiki_qa",
+    "columns": {
+      "prompt": "question",
+      "response": "answer"
+    }
+  },
+  "webqa": {
+    "hf_hub_url": "suolyer/webqa",
+    "ms_hub_url": "AI-ModelScope/webqa",
+    "columns": {
+      "prompt": "input",
+      "response": "output"
+    }
+  },
+  "webnovel": {
+    "hf_hub_url": "zxbsmk/webnovel_cn",
+    "ms_hub_url": "AI-ModelScope/webnovel_cn"
+  },
+  "nectar_sft": {
+    "hf_hub_url": "AstraMindAI/SFT-Nectar",
+    "ms_hub_url": "AI-ModelScope/SFT-Nectar"
+  },
+  "deepctrl": {
+    "ms_hub_url": "deepctrl/deepctrl-sft-data"
+  },
+  "adgen": {
+    "hf_hub_url": "HasturOfficial/adgen",
+    "ms_hub_url": "AI-ModelScope/adgen",
+    "columns": {
+      "prompt": "content",
+      "response": "summary"
+    }
+  },
+  "sharegpt_hyper": {
+    "hf_hub_url": "totally-not-an-llm/sharegpt-hyperfiltered-3k",
+    "formatting": "sharegpt"
+  },
+  "sharegpt4": {
+    "hf_hub_url": "shibing624/sharegpt_gpt4",
+    "ms_hub_url": "AI-ModelScope/sharegpt_gpt4",
+    "formatting": "sharegpt"
+  },
+  "ultrachat_200k": {
+    "hf_hub_url": "HuggingFaceH4/ultrachat_200k",
+    "ms_hub_url": "AI-ModelScope/ultrachat_200k",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "agent_instruct": {
+    "hf_hub_url": "THUDM/AgentInstruct",
+    "ms_hub_url": "ZhipuAI/AgentInstruct",
+    "formatting": "sharegpt"
+  },
+  "lmsys_chat": {
+    "hf_hub_url": "lmsys/lmsys-chat-1m",
+    "ms_hub_url": "AI-ModelScope/lmsys-chat-1m",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversation"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "human",
+      "assistant_tag": "assistant"
+    }
+  },
+  "evol_instruct": {
+    "hf_hub_url": "WizardLM/WizardLM_evol_instruct_V2_196k",
+    "ms_hub_url": "AI-ModelScope/WizardLM_evol_instruct_V2_196k",
+    "formatting": "sharegpt"
+  },
+  "glaive_toolcall_100k": {
+    "hf_hub_url": "hiyouga/glaive-function-calling-v2-sharegpt",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "tools": "tools"
+    }
+  },
+  "cosmopedia": {
+    "hf_hub_url": "HuggingFaceTB/cosmopedia",
+    "columns": {
+      "prompt": "prompt",
+      "response": "text"
+    }
+  },
+  "stem_zh": {
+    "hf_hub_url": "hfl/stem_zh_instruction"
+  },
+  "ruozhiba_gpt4": {
+    "hf_hub_url": "hfl/ruozhiba_gpt4_turbo"
+  },
+  "neo_sft": {
+    "hf_hub_url": "m-a-p/neo_sft_phase2",
+    "formatting": "sharegpt"
+  },
+  "magpie_pro_300k": {
+    "hf_hub_url": "Magpie-Align/Magpie-Pro-300K-Filtered",
+    "formatting": "sharegpt"
+  },
+  "web_instruct": {
+    "hf_hub_url": "TIGER-Lab/WebInstructSub",
+    "columns": {
+      "prompt": "question",
+      "response": "answer"
+    }
+  },
+  "llava_1k_en": {
+    "hf_hub_url": "BUAADreamer/llava-en-zh-2k",
+    "subset": "en",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "llava_1k_zh": {
+    "hf_hub_url": "BUAADreamer/llava-en-zh-2k",
+    "subset": "zh",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "llava_150k_en": {
+    "hf_hub_url": "BUAADreamer/llava-en-zh-300k",
+    "subset": "en",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "llava_150k_zh": {
+    "hf_hub_url": "BUAADreamer/llava-en-zh-300k",
+    "subset": "zh",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "mllm_pt_demo": {
+    "hf_hub_url": "BUAADreamer/mllm_pt_demo",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "oasst_de": {
+    "hf_hub_url": "mayflowergmbh/oasst_de"
+  },
+  "dolly_15k_de": {
+    "hf_hub_url": "mayflowergmbh/dolly-15k_de"
+  },
+  "alpaca-gpt4_de": {
+    "hf_hub_url": "mayflowergmbh/alpaca-gpt4_de"
+  },
+  "openschnabeltier_de": {
+    "hf_hub_url": "mayflowergmbh/openschnabeltier_de"
+  },
+  "evol_instruct_de": {
+    "hf_hub_url": "mayflowergmbh/evol-instruct_de"
+  },
+  "dolphin_de": {
+    "hf_hub_url": "mayflowergmbh/dolphin_de"
+  },
+  "booksum_de": {
+    "hf_hub_url": "mayflowergmbh/booksum_de"
+  },
+  "airoboros_de": {
+    "hf_hub_url": "mayflowergmbh/airoboros-3.0_de"
+  },
+  "ultrachat_de": {
+    "hf_hub_url": "mayflowergmbh/ultra-chat_de"
+  },
+  "dpo_en_demo": {
+    "file_name": "dpo_en_demo.json",
+    "ranking": true,
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  },
+  "dpo_zh_demo": {
+    "file_name": "dpo_zh_demo.json",
+    "ranking": true,
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  },
+  "dpo_mix_en": {
+    "hf_hub_url": "hiyouga/DPO-En-Zh-20k",
+    "subset": "en",
+    "ranking": true,
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  },
+  "dpo_mix_zh": {
+    "hf_hub_url": "hiyouga/DPO-En-Zh-20k",
+    "subset": "zh",
+    "ranking": true,
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  },
+  "ultrafeedback": {
+    "hf_hub_url": "llamafactory/ultrafeedback_binarized",
+    "ms_hub_url": "llamafactory/ultrafeedback_binarized",
+    "ranking": true,
+    "columns": {
+      "prompt": "instruction",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  },
+  "orca_pairs": {
+    "hf_hub_url": "Intel/orca_dpo_pairs",
+    "ranking": true,
+    "columns": {
+      "prompt": "question",
+      "chosen": "chosen",
+      "rejected": "rejected",
+      "system": "system"
+    }
+  },
+  "hh_rlhf_en": {
+    "script_url": "hh_rlhf_en",
+    "ranking": true,
+    "columns": {
+      "prompt": "instruction",
+      "chosen": "chosen",
+      "rejected": "rejected",
+      "history": "history"
+    }
+  },
+  "nectar_rm": {
+    "hf_hub_url": "AstraMindAI/RLAIF-Nectar",
+    "ms_hub_url": "AI-ModelScope/RLAIF-Nectar",
+    "ranking": true
+  },
+  "orca_dpo_de": {
+    "hf_hub_url": "mayflowergmbh/intel_orca_dpo_pairs_de",
+    "ranking": true
+  },
+  "kto_en_demo": {
+    "file_name": "kto_en_demo.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "kto_tag": "label"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "kto_mix_en": {
+    "hf_hub_url": "argilla/kto-mix-15k",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "completion",
+      "kto_tag": "label"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "ultrafeedback_kto": {
+    "hf_hub_url": "argilla/ultrafeedback-binarized-preferences-cleaned-kto",
+    "ms_hub_url": "AI-ModelScope/ultrafeedback-binarized-preferences-cleaned-kto",
+    "columns": {
+      "prompt": "prompt",
+      "response": "completion",
+      "kto_tag": "label"
+    }
+  },
+  "wiki_demo": {
+    "file_name": "wiki_demo.txt",
+    "columns": {
+      "prompt": "text"
+    }
+  },
+  "c4_demo": {
+    "file_name": "c4_demo.json",
+    "columns": {
+      "prompt": "text"
+    }
+  },
+  "refinedweb": {
+    "hf_hub_url": "tiiuae/falcon-refinedweb",
+    "columns": {
+      "prompt": "content"
+    }
+  },
+  "redpajama_v2": {
+    "hf_hub_url": "togethercomputer/RedPajama-Data-V2",
+    "columns": {
+      "prompt": "raw_content"
+    },
+    "subset": "default"
+  },
+  "wikipedia_en": {
+    "hf_hub_url": "olm/olm-wikipedia-20221220",
+    "ms_hub_url": "AI-ModelScope/olm-wikipedia-20221220",
+    "columns": {
+      "prompt": "text"
+    }
+  },
+  "wikipedia_zh": {
+    "hf_hub_url": "pleisto/wikipedia-cn-20230720-filtered",
+    "ms_hub_url": "AI-ModelScope/wikipedia-cn-20230720-filtered",
+    "columns": {
+      "prompt": "completion"
+    }
+  },
+  "pile": {
+    "hf_hub_url": "monology/pile-uncopyrighted",
+    "ms_hub_url": "AI-ModelScope/pile",
+    "columns": {
+      "prompt": "text"
+    }
+  },
+  "skypile": {
+    "hf_hub_url": "Skywork/SkyPile-150B",
+    "ms_hub_url": "AI-ModelScope/SkyPile-150B",
+    "columns": {
+      "prompt": "text"
+    }
+  },
+  "fineweb": {
+    "hf_hub_url": "HuggingFaceFW/fineweb",
+    "columns": {
+      "prompt": "text"
+    }
+  },
+  "fineweb_edu": {
+    "hf_hub_url": "HuggingFaceFW/fineweb-edu",
+    "columns": {
+      "prompt": "text"
+    }
+  },
+  "the_stack": {
+    "hf_hub_url": "bigcode/the-stack",
+    "ms_hub_url": "AI-ModelScope/the-stack",
+    "columns": {
+      "prompt": "content"
+    }
+  },
+  "starcoder_python": {
+    "hf_hub_url": "bigcode/starcoderdata",
+    "ms_hub_url": "AI-ModelScope/starcoderdata",
+    "columns": {
+      "prompt": "content"
+    },
+    "folder": "python"
+  }
+}
