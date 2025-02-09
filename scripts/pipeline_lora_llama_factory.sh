@@ -5,36 +5,41 @@ ROOT_DIR=$(dirname $(dirname `readlink -f $0`))
 # model
 for model_name in Qwen2.5-7B Qwen2.5-1.5B Qwen2.5-3B;do
 template=default
-task=fft_1e-5_2epoch
 model_dir=$ROOT_DIR/model_card/$model_name
-
-for l in de cs ru zh fi kk he is; do
-	for src in $l en; do
-
-        # train_stage
-		if [ $src = "en" ]; then
+for dropout in 0.05;do
+for rank in 128;do
+    for learning_rate in 5e-5; do
+    for l in de cs ru zh he fi kk is ; do
+	    for src in $l en; do 
+        if [ $src = "en" ]; then
 			tgt=$l
 		else 
 			tgt=en
 		fi
-		lang_pair=${src}-$tgt
+        task=lora_${rank}_${learning_rate}_${dropout}_2epoch_attention_MLP
+        lang_pair=${src}-$tgt
 		lp=${src}2${tgt}
         tag=$lang_pair
-        # data
-        dataset_dir=$ROOT_DIR/data/multi_llama_factory
+         # train_stage
+         # data
+        dataset_dir=$ROOT_DIR/data/fine-tuning_data/multi_llama_factory
         train_data=train-$lang_pair
         eval_dataset=valid-$lang_pair
 
         config_file=./configs/ds_z2_config.json
 
-        output_dir=$ROOT_DIR/exps/$model_name/$task/$tag
+        output_dir=$ROOT_DIR/exps/$model_name/$task/$tag/adapter
         mkdir -p $output_dir
         cp $0 $output_dir
 
         llamafactory-cli train \
             --deepspeed  $config_file \
             --stage sft \
-            --finetuning_type full \
+            --finetuning_type lora \
+            --lora_target q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj \
+            --lora_rank $rank \
+            --lora_alpha $((rank * 2)) \
+            --lora_dropout $dropout \
             --model_name_or_path $model_dir \
             --dataset_dir $dataset_dir \
             --dataset $train_data \
@@ -44,12 +49,12 @@ for l in de cs ru zh fi kk he is; do
             --do_train True \
             --do_eval True \
             --use_fast_tokenizer True \
-            --learning_rate 1e-5 \
+            --learning_rate $learning_rate \
             --lr_scheduler_type cosine \
             --warmup_ratio 0.01 \
             --num_train_epochs 2 \
             --per_device_train_batch_size 9 \
-            --per_device_eval_batch_size 8 \
+            --per_device_eval_batch_size 12 \
             --gradient_accumulation_steps 1 \
             --eval_steps 0.1 \
             --save_steps 0.1 \
@@ -72,14 +77,37 @@ for l in de cs ru zh fi kk he is; do
             --ddp_timeout 180000000 \
             | tee $output_dir/train.log
 
-        # predict_stage
-        
-        log_path=$ROOT_DIR/exps/$model_name/$task/train.log
 
-        folder=$ROOT_DIR/exps/$model_name/$task
+        # merge_stage
+        # 指定要查找的目录（例如当前目录）
+        # search_dir=$ROOT_DIR/exps/$model_name/$task/$tag/adapter
+
+
+        # predict_adapter_dir=$(find "$search_dir" -type d -name "checkpoint*" | \
+        #  sed -E 's/.*checkpoint-([0-9]+).*/\1 &/' | \
+        #  sort -n | \
+        #  tail -n 1 | \
+        #  awk -F/ '{print $NF}')
+
+        # llamafactory-cli export \
+        #     --model_name_or_path $model_dir \
+        #     --adapter_name_or_path  $search_dir/$predict_adapter_dir \
+        #     --template $template \
+        #     --finetuning_type lora \
+        #     --export_dir $ROOT_DIR/exps/$model_name/$task/$tag/$predict_adapter_dir \
+        #     --export_size 2 \
+        #     --export_device cpu \
+        #     --export_legacy_format False
+ 
+
+
+
+        # predict_stage
+        log_path=$ROOT_DIR/exps/$model_name/$task/$lang_pair/adapter/train.log
+
+        folder=$ROOT_DIR/exps/$model_name/$task/$lang_pair/adapter
 
         check_point_strs=""
-
 
         # 使用 find 命令查找满足条件的文件夹，并将结果存储在数组 folders 中
         folders=($(find "$folder" -type d -name "checkpoint*"))
@@ -99,10 +127,17 @@ for l in de cs ru zh fi kk he is; do
         predict_model_id=$(python3 ../src/get_best_checkpoint.py \
                 --train_log_path $log_path \
                 --check_point_strs $check_point_strs)
-        predict_model_dir=$ROOT_DIR/exps/$model_name/$task/$tag/checkpoint-$predict_model_id
-        #predict_model_dir=/mnt/luoyingfeng/lora4mt/exps/$model_name/$task/$tag/checkpoint-418
-        dataset_dir=$ROOT_DIR/data/multi_llama_factory
-        test_dataset=test-$lang_pair #
+        predict_model_dir=$ROOT_DIR/exps/$model_name/$task/$tag/adapter/checkpoint-$predict_model_id
+        # predict_model_dir=/mnt/luoyingfeng/lora4mt/exps/Meta-Llama-3.1-8B/lora_multi_16_1e-4_3epoch/adapter/checkpoint-1500
+        template=$template
+        dataset_dir=$ROOT_DIR/data/fine-tuning_data/multi_llama_factory
+        if [ $src = "en" ]; then
+			test_dataset=test-${src}-${l}
+            lp=en2${l}
+		else 
+		    test_dataset=test-${l}-en
+            lp=${l}2en
+		fi
 
         output_dir=$predict_model_dir/decode_result
         mkdir -p $output_dir
@@ -110,7 +145,10 @@ for l in de cs ru zh fi kk he is; do
 
 
         llamafactory-cli train \
-            --model_name_or_path $predict_model_dir \
+            --model_name_or_path $ROOT_DIR/model_card/$model_name \
+            --adapter_name_or_path $predict_model_dir \
+            --finetuning_type lora \
+            --infer_backend huggingface \
             --dataset_dir $dataset_dir \
             --eval_dataset $test_dataset \
             --template $template \
@@ -121,7 +159,7 @@ for l in de cs ru zh fi kk he is; do
             --do_eval False \
             --do_predict \
             --use_fast_tokenizer True \
-            --per_device_eval_batch_size 16 \
+            --per_device_eval_batch_size 8 \
             --predict_with_generate \
             --logging_steps 0.01 \
             --preprocessing_num_workers 16 \
@@ -136,20 +174,29 @@ for l in de cs ru zh fi kk he is; do
             --dataloader_num_workers 8 \
             | tee $output_dir/train.log
 
+        # eval_stage
+        # folder=/mnt/luoyingfeng/lora4mt/exps/$model_name/$task/$tag/adapter
 
-    # # eval_stage
+        # # 查找文件夹，过滤出包含"checkpoint"的文件夹，提取文件夹名中的数字部分，并返回数字最大的文件夹
+        # predict_model_dir=$(find "$folder" -type d -name "checkpoint*" | \
+        #  sed -E 's/.*checkpoint-([0-9]+).*/\1 &/' | \
+        #  sort -n | \
+        #  tail -n 1 | \
+        #  awk '{print substr($0, index($0,$2))}')
+        # predict_model_dir=/mnt/luoyingfeng/lora4mt/exps/Meta-Llama-3.1-8B/lora_multi_16_1e-4_3epoch/adapter/checkpoint-1500
+        test_file=$ROOT_DIR/data/fine-tuning_data/common/$l-en/test.$lp.json
+        hypo_file=$predict_model_dir/decode_result/generated_predictions.jsonl
+        record_file=./lora_eval_result.txt
 
-    test_file=$ROOT_DIR/data/common/$l-en/test.$lp.json
-    hypo_file=$predict_model_dir/decode_result/generated_predictions.jsonl
-    record_file=./fft_eval_result.txt
-    
-    python ../src/compute_bleu_comet.py \
-        --metric "bleu,comet_22" \
-        --lang_pair $lp \
-        --test_file $test_file \
-        --hypo_file $hypo_file \
-        --record_file $record_file
-
+        python ../src/compute_bleu_comet.py \
+            --metric "bleu,comet_22" \
+            --lang_pair $lp \
+            --test_file $test_file \
+            --hypo_file $hypo_file \
+            --record_file $record_file
+        done
+        done
 	done
+done
 done
 done

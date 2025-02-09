@@ -3,12 +3,13 @@ set -eux
 ROOT_DIR=$(dirname $(dirname `readlink -f $0`))
 
 # model
-for model_name in Qwen2.5-7B Qwen2.5-1.5B Qwen2.5-3B Qwen2.5-14B Qwen2.5-32B ;do
+for model_name in Qwen2.5-7B Qwen2.5-1.5B Qwen2.5-3B;do
 template=default
+dropout=0.05
 model_dir=$ROOT_DIR/model_card/$model_name
 for rank in 16;do
     for learning_rate in 5e-5; do
-        task=lora_multi_${rank}_${learning_rate}_2epoch
+        task=lora_multi_${rank}_${learning_rate}_${dropout}_2epoch_attention_MLP
         # train_stage
         # data
         dataset_dir=$ROOT_DIR/data/fine-tuning_data/multi_llama_factory
@@ -28,7 +29,7 @@ for rank in 16;do
             --lora_target q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj \
             --lora_rank $rank \
             --lora_alpha $((rank * 2)) \
-	    --lora_dropout 0.05 \
+            --lora_dropout $dropout \
             --model_name_or_path $model_dir \
             --dataset_dir $dataset_dir \
             --dataset $train_data \
