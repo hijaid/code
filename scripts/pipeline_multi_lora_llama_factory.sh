@@ -28,6 +28,7 @@ for rank in 16;do
             --lora_target q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj \
             --lora_rank $rank \
             --lora_alpha $((rank * 2)) \
+	    --lora_dropout 0.05 \
             --model_name_or_path $model_dir \
             --dataset_dir $dataset_dir \
             --dataset $train_data \
