@@ -44,7 +44,7 @@ for rank in 128;do
             --warmup_ratio 0.01 \
             --num_train_epochs 1 \
             --per_device_train_batch_size 2 \
-            --per_device_eval_batch_size 12 \
+            --per_device_eval_batch_size 2 \
             --gradient_accumulation_steps 4 \
             --eval_steps 0.1 \
             --save_steps 0.1 \
@@ -131,7 +131,7 @@ for rank in 128;do
                 --do_eval False \
                 --do_predict \
                 --use_fast_tokenizer True \
-                --per_device_eval_batch_size 8 \
+                --per_device_eval_batch_size 2 \
                 --predict_with_generate \
                 --logging_steps 0.01 \
                 --preprocessing_num_workers 16 \
