@@ -11,8 +11,8 @@ task=fft_multi_1e-5_2epoch
 # train_stage
 # data
 dataset_dir=$ROOT_DIR/data/fine-tuning_data/multi_llama_factory
-train_data=train-multi-high
-eval_dataset=valid-multi-high
+train_data=train-multi
+eval_dataset=valid-multi
 
 config_file=./configs/ds_z2_config.json
 
