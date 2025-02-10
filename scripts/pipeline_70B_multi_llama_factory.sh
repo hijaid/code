@@ -38,7 +38,7 @@ llamafactory-cli train \
     --warmup_ratio 0.01 \
     --num_train_epochs 1 \
     --per_device_train_batch_size 1 \
-    --per_device_eval_batch_size 4 \
+    --per_device_eval_batch_size 2 \
     --gradient_accumulation_steps 8 \
     --eval_steps 0.1 \
     --save_steps 0.1 \
@@ -122,7 +122,7 @@ llamafactory-cli train \
             --do_eval False \
             --do_predict \
             --use_fast_tokenizer True \
-            --per_device_eval_batch_size 4 \
+            --per_device_eval_batch_size 2 \
             --predict_with_generate \
             --logging_steps 0.01 \
             --preprocessing_num_workers 16 \
