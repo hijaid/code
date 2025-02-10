@@ -7,7 +7,7 @@ for model_name in Qwen2.5-7B Qwen2.5-1.5B Qwen2.5-3B;do
 template=default
 dropout=0.05
 model_dir=$ROOT_DIR/model_card/$model_name
-for rank in 16;do
+for rank in 128;do
     for learning_rate in 5e-5; do
         task=lora_multi_${rank}_${learning_rate}_${dropout}_2epoch_attention_MLP
         # train_stage
